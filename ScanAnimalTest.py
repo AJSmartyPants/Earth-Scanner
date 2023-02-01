@@ -5,7 +5,7 @@ import json
 
 def identify_animal(image_path):
     # Use an object detection API to identify the animal in the image
-    api_key = "YOUR_API_KEY_HERE"
+    api_key = "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"
     url = "https://api.openai.com/v1/images/models/aaa03c23b3724a16a56b629203edc62c/outputs"
 
     image = cv2.imread(image_path)
@@ -13,11 +13,18 @@ def identify_animal(image_path):
 
     headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer YOUR_API_KEY_HERE'
-}
+    'Authorization': 'Bearer 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'
+    }
+    data = {
+        "data": [{
+            "image": {
+                "base64": image_path
+            }
+        }]
+    }
     response = requests.post(url, headers=headers, data=data)
-    if response.status_code != 200:
-        raise Exception("Failed to identify animal")
+    #if response.status_code != 200:
+    #    raise Exception("Failed to identify animal")
     print(response.text)
     result = json.loads(response.text)['data'][0]['concepts'][0]
     #response = requests.post(
@@ -41,7 +48,7 @@ def identify_animal(image_path):
     confidence = result['value']
 
     # Get information about the animal from a separate API
-    api_key = "YOUR_API_KEY_HERE"
+    api_key = "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"
     url = f"https://api.openai.com/v1/engines/babbage/jobs"
 
     response = requests.post(

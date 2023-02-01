@@ -11,8 +11,8 @@ menubar = Menu(root)
 def hello():
     print('hello')
 #adding everything to the menubar and displaying it in the window
-menubar.add_command(label="Hello!", font = ("", 50), command=hello)  
-menubar.add_command(label="Quit!", font = ("", 50), command=root.quit)
+menubar.add_command(label="Home", font = ("Arial", 300), command=hello)  
+menubar.add_command(label="Quit!", font = ("Arial", 300), command=root.quit)
 #menubar.config(font = ('Banhschrift SemiLight', 20, 'normal'), background = '#AAAAEE')
 root.config(menu = menubar)
 #root.state('zoomed')
