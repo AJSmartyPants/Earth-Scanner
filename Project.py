@@ -5,14 +5,15 @@ import cv2
 
 #creating the window with a menubar, and adding menubar functions
 root = Tk()
-root.configure(bg = '#e6f7ff')
+root.configure(bg = '#CCCCFE')
 menubar = Menu(root)
 #creating the functions
 def hello():
     print('hello')
 #adding everything to the menubar and displaying it in the window
-menubar.add_command(label="Hello!", command=hello)  
-menubar.add_command(label="Quit!", command=root.quit)
+menubar.add_command(label="Hello!", font = ("", 50), command=hello)  
+menubar.add_command(label="Quit!", font = ("", 50), command=root.quit)
+#menubar.config(font = ('Banhschrift SemiLight', 20, 'normal'), background = '#AAAAEE')
 root.config(menu = menubar)
 #root.state('zoomed')
 #root.geometry("{0}x{1}+0+0".format(root.winfo_screenwidth(), root.winfo_screenheight()))
