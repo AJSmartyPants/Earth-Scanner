@@ -2,6 +2,8 @@ from tkinter import *
 import tkinter as tk
 from PIL import Image, ImageTk
 import cv2
+import webview
+import webbrowser
 
 #creating the window with a menubar, and adding menubar functions
 root = Tk()
@@ -10,6 +12,9 @@ menubar = Menu(root)
 #creating the functions
 def hello():
     print('hello')
+def scananimal():
+    #webview.create_window('Scan_Animal', 'index.html')#, width = 800, height = 600)
+    webbrowser.open_new_tab(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index.html')
 #adding everything to the menubar and displaying it in the window
 menubar.add_command(label="Home", font = ("Arial", 300), command=hello)  
 menubar.add_command(label="Quit!", font = ("Arial", 300), command=root.quit)
@@ -29,7 +34,7 @@ spimgf = ImageTk.PhotoImage(spimg)
 infimg = Image.open(r"C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\KnowHubIcon.png").resize((100, 100), Image.LANCZOS)
 infimgf = ImageTk.PhotoImage(infimg)
 
-sabn = Button(root, text = 'Scan Animals', font = ('Britannic Bold', 20, 'bold'), fg = '#0018b8', activeforeground = '#0022ff', bg = '#82e2ff', activebackground = '#b5eeff', image = saimgf, compound = BOTTOM)#, width = int(winwidth/10), height = int(winheight/10))
+sabn = Button(root, text = 'Scan Animals', font = ('Britannic Bold', 20, 'bold'), fg = '#0018b8', activeforeground = '#0022ff', bg = '#82e2ff', activebackground = '#b5eeff', image = saimgf, compound = BOTTOM, command = scananimal)#, width = int(winwidth/10), height = int(winheight/10))
 spbn = Button(root, text = 'Scan Plants', font = ('Britannic Bold', 20, 'bold'), fg = '#0018b8', activeforeground = '#0022ff', bg = '#82e2ff', activebackground = '#b5eeff', image = spimgf, compound = BOTTOM)#, width = int(winwidth/10), height = int(winheight/10))
 ibn = Button(root, text = 'Knowledge Hub', font = ('Britannic Bold', 20, 'bold'), fg = '#0018b8', activeforeground = '#0022ff', bg = '#82e2ff', activebackground = '#b5eeff', image = infimgf, compound = BOTTOM)#, width = int(winwidth/10), height = int(winheight/10))
 #hsb = Button(root, text = 'Scan', font=('Britannic Bold', 20, 'bold'), fg = '#7700CC', activeforeground = '#0099FF', bg = '#9999FF',
