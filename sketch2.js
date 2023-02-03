@@ -1,6 +1,6 @@
 let classifier;
 // Model URL
-let imageModelURL = 'https://teachablemachine.withgoogle.com/models/JCF26yjL3/';
+let imageModelURL = 'https://teachablemachine.withgoogle.com/models/5cSgLacCB/';
 //import json;
 let text_widget;
 
@@ -75,7 +75,7 @@ function gotResult(error, results) {
   //createElement('h3', label)
   passVariableToHTML(label)
   text_widget = createP('');
-  let api_url = 'https://api.api-ninjas.com/v1/animals?name=' + label;
+  let api_url = 'https://api.api-ninjas.com/v1/dictionary?word=' + label;
   var headers = {
     'X-Api-Key': 'wCrBnEMU6ayQP7U+43e7/A==wd7RvCoQVu5k3C2x'
   };
@@ -128,7 +128,11 @@ function gotResult(error, results) {
     headers: headers
   }, function(result) {
     var data = JSON.parse(result);
-    for (var i = 0; i < data.length; i++) {
+    //var item = data[i]
+    var plantdef = data["definition"]
+    console.log(plantdef)
+    createP(plantdef)
+    /*for (var i = 0; i < data.length; i++) {
       var item = data[i];
       console.log("Name: " + item["name"]);
       console.log("Taxonomy:");
@@ -152,12 +156,14 @@ function gotResult(error, results) {
         createP(key+": " + characteristics[key]);
       }
     }
-  });
+  });*/
 
   // Classifiy again!
   //classifyVideo();
-}
+})
+
 function passVariableToHTML(variable) {
   let variableContainer = document.getElementById("variableContainer");
   variableContainer.innerHTML = variable;
+}
 }

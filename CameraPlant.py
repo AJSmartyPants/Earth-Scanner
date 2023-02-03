@@ -2,7 +2,7 @@ from tkinter import *
 import tkinter as tk
 from PIL import Image, ImageTk
 import cv2
-import webview
+import webbrowser
 #import ml5 as ml5555
 #img = ''
 #modelURL = "https://teachablemachine.withgoogle.com/models/JCF26yjL3/"
@@ -24,6 +24,7 @@ def scan():
     # Release the camera and close the window
     cap.release()
     cv2.destroyAllWindows()
+    webbrowser.open_new_tab(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index2.html')
     #cv2.imshow("Picture Taken", frame)
     # Define the image variable that we will use to extract medicine info from
     #global img

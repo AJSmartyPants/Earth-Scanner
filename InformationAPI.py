@@ -12,7 +12,8 @@ with open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanne
     soup = BeautifulSoup(fp, 'html.parser')
 #soup = BeautifulSoup(open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index.html')).read()
 #soup2 = BeautifulSoup(soup.content, 'html5lib')
-print(soup)#.select_one('h3'))
+labeltext = soup.select_one('p').text
+print(labeltext)
 
 # Load the data from the file
 #with open(r"Earth-Scanner\results.json", "r") as file:
@@ -49,7 +50,7 @@ root.title("Information")
 text_widget = tk.Text(root, height=20, width=50)
 text_widget.pack()
 
-display_button = ttk.Button(root, text="Display Information", command=lambda:display_information())
+display_button = ttk.Button(root, text="Display Information", command=lambda:display_information(labeltext))
 display_button.pack()
 
 root.mainloop()
