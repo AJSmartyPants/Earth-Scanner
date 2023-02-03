@@ -1,0 +1,37 @@
+{
+  "question": [
+    "Q1. What is the fastest land animal?",
+    "Q2. Which part of the rhubarb plant is poisonous, if any part?",
+    "Q3. What is the smallest plant in the world?",
+    "Q4. What color is a polar bear's skin?"
+  ],
+  "answer": [
+    1,
+    4,
+    3,
+    2
+  ],
+  "options": [
+
+    ["Cheetah",
+      "Humming bird",
+      "Snail",
+      "Zebra"
+    ],
+    ["The stalk",
+      "It's not poisonous",
+      "The entire plant",
+      "The leaf"
+    ],
+    ["Thistle",
+      "Thymus Vulgaris",
+      "Wolffia Globosa",
+      "Alfalfa"
+    ],
+    ["White",
+      "Black",
+      "Brown",
+      "Peach"
+    ]
+  ]
+}

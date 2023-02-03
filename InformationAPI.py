@@ -3,6 +3,24 @@ import pandas as pd
 import json
 import tkinter as tk
 from tkinter import ttk
+#import urllib2
+from bs4 import BeautifulSoup
+#from sketch import label
+
+#r = requests.get('https://index.html')
+with open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index.html') as fp:
+    soup = BeautifulSoup(fp, 'html.parser')
+#soup = BeautifulSoup(open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index.html')).read()
+#soup2 = BeautifulSoup(soup.content, 'html5lib')
+print(soup)#.select_one('h3'))
+
+# Load the data from the file
+#with open(r"Earth-Scanner\results.json", "r") as file:
+#    data = json.load(file)
+
+# Use the data as needed
+#results = data
+
 def display_information(animalname):
     name = animalname
     api_url = 'https://api.api-ninjas.com/v1/animals?name={}'.format(name)

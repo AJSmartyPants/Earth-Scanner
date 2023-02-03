@@ -1,6 +1,7 @@
 let classifier;
 // Model URL
 let imageModelURL = 'https://teachablemachine.withgoogle.com/models/JCF26yjL3/';
+//import json;
 
 // Video
 //let video;
@@ -15,6 +16,8 @@ function preload() {
   //img = loadImage("https://crossorigin.me/C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\object.jpg")
   //img = loadImage("C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\object.jpg")
   img = loadImage('object.jpg')
+  //resultfile = loadStrings('C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\results.txt')
+  //savefile = loadBytes('C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\results.txt')
 }
 
 function setup() {
@@ -27,6 +30,7 @@ function setup() {
   //flippedVideo = ml5.flipImage(video)
   // Start classifying
   //image(img, 0, 0, 200, 200);
+  //resulfile = []
   classifyVideo();
 }
 
@@ -56,6 +60,17 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   //console.log(results[0]);
   label = results[0].label;
+  //saveJSON(label, 'result.json')
+  //resultfile.splice(0,2);
+  //resultfile.push(label)
+  //saveStrings(resultfile, 'results.txt')
+  //console.log(resultfile)
+  
+  //writer = 'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\results.txt'
+  //writer.write(label)
+  //writer.close()
+  //htmllabel = index.html.createElement('h3', label);
+  createElement('h3', label)
   // Classifiy again!
   //classifyVideo();
 }
