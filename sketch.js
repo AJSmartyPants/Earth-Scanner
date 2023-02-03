@@ -15,9 +15,11 @@ let label = "Loading...";
 function preload() {
   classifier = ml5.imageClassifier(imageModelURL + 'model.json');
   //img = loadImage("https://crossorigin.me/C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\object.jpg")
-  //img = loadImage("C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\object.jpg")
+  //img = loadImage("https://cors-anywhere.herokuapp.com/file:///C:/Users/inao/OneDrive/Desktop/Scanning%20Scouts%20Project/Earth-Scanner/object.jpg")
   //img = loadImage('Earth-Scanner/object.jpg')
   img = select('img', 'body')
+  //img = createImg("object.jpg")
+  //img = loadImage("file:///C:/Users/tinao/OneDrive/Desktop/Scanning%20Scouts%20Project/Earth-Scanner/object.jpg")
   //resultfile = loadStrings('C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\results.txt')
   //savefile = loadBytes('C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\results.txt')
 }
