@@ -9,11 +9,11 @@ import json
 from subprocess import Popen
 import subprocess
 import os
-#import Quizcode
 
-#creating the window with a menubar, and adding menubar functions
+#creating the window
 root = Tk()
 root.configure(bg = '#CCCCFE')
+root.title("Earth Scanner")
 #root.state('zoomed')
 #root.geometry("{0}x{1}+0+0".format(root.winfo_screenwidth(), root.winfo_screenheight()))
 #creating the functions

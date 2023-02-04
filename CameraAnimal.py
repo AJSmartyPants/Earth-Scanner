@@ -33,7 +33,8 @@ def scan():
     #with socketserver.TCPServer(("localhost", PORT), handler) as httpd:
     #    print("Serving on port", PORT)
     #    httpd.serve_forever()
-    webbrowser.open_new_tab(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index.html')
+    #webbrowser.open_new_tab(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index.html')
+    webbrowser.open_new_tab("http://127.0.0.1:5500/Earth-Scanner/index.html")
     #cv2.imshow("Picture Taken", frame)
     # Define the image variable that we will use to extract medicine info from
     #global img

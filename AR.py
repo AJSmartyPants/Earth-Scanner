@@ -13,19 +13,19 @@ global qrsaimgf
 qrsaimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Sea Animals.png').resize((200, 200), Image.LANCZOS)
 qrsaimgf = ImageTk.PhotoImage(qrsaimg)
 global qrlaimgf
-qrlaimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Sea Animals.png').resize((200, 200), Image.LANCZOS)
+qrlaimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Land Animals.png').resize((200, 200), Image.LANCZOS)
 qrlaimgf = ImageTk.PhotoImage(qrlaimg)
 global qrbimgf
-qrbimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Sea Animals.png').resize((200, 200), Image.LANCZOS)
+qrbimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Birds.png').resize((200, 200), Image.LANCZOS)
 qrbimgf = ImageTk.PhotoImage(qrbimg)
 global qriimgf
-qriimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Sea Animals.png').resize((200, 200), Image.LANCZOS)
+qriimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Insects.png').resize((200, 200), Image.LANCZOS)
 qriimgf = ImageTk.PhotoImage(qriimg)
 global qrpimgf
-qrpimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Sea Animals.png').resize((200, 200), Image.LANCZOS)
+qrpimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Plants.png').resize((200, 200), Image.LANCZOS)
 qrpimgf = ImageTk.PhotoImage(qrpimg)
 global qrfimgf
-qrfimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Sea Animals.png').resize((200, 200), Image.LANCZOS)
+qrfimg = Image.open(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\Images\Flowers.png').resize((200, 200), Image.LANCZOS)
 qrfimgf = ImageTk.PhotoImage(qrfimg)
 #Text Label
 def show():

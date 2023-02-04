@@ -24,7 +24,8 @@ def scan():
     # Release the camera and close the window
     cap.release()
     cv2.destroyAllWindows()
-    webbrowser.open_new_tab(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index2.html')
+    #webbrowser.open_new_tab(r'C:\Users\tinao\OneDrive\Desktop\Scanning Scouts Project\Earth-Scanner\index2.html')
+    webbrowser.open_new_tab("http://127.0.0.1:5500/Earth-Scanner/index2.html")
     #cv2.imshow("Picture Taken", frame)
     # Define the image variable that we will use to extract medicine info from
     #global img
